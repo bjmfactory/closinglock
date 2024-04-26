@@ -1,6 +1,5 @@
 <script setup>
 import DocumentItem from '@/components/DocumentItem.vue'
-import DocumentService from '@/services/DocumentService'
 
 import { useDocumentStore } from '@/stores/documents'
 import { storeToRefs } from 'pinia'

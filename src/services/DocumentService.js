@@ -1,3 +1,4 @@
+/* Currently unusued, just mocking out in Pinia store instead */
 import axios from 'axios'
 
 const apiClient = axios.create({

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import DocumentsView from '@/views/DocumentsView.vue'
 import SecurePaymentsView from '@/views/SecurePaymentsView.vue'
 
 const router = createRouter({
@@ -7,8 +7,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'documents',
+      component: DocumentsView
     },
     {
       path: '/secure-payments',
