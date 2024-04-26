@@ -1,5 +1,7 @@
 <script setup>
-const props = defineProps({
+import { ref, computed } from 'vue'
+
+defineProps({
   document: Object
 })
 </script>
@@ -10,6 +12,7 @@ const props = defineProps({
       <a :href="document.viewLink">{{ document.name }}</a>
     </td>
     <td>{{ document.isComplete === 'True' ? 'Complete' : 'Incomplete' }}</td>
+    <td>{{ document.isComplete === 'True' ? 'View Document' : 'Sign Document' }}</td>
   </tr>
 </template>
 
