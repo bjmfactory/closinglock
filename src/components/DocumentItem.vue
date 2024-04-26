@@ -1,26 +1,15 @@
 <script setup>
-defineProps({
-  isComplete: {
-    type: Boolean,
-    required: true
-  },
-  name: {
-    type: String,
-    required: true
-  },
-  viewLink: {
-    type: String,
-    required: true
-  }
+const props = defineProps({
+  document: Object
 })
 </script>
 
 <template>
   <tr>
     <td>
-      <a :href="viewLink">{{ name }}</a>
+      <a :href="document.viewLink">{{ document.name }}</a>
     </td>
-    <td>{{ isComplete ? 'Complete' : 'Not Complete' }}</td>
+    <td>{{ document.isComplete === 'True' ? 'Complete' : 'Incomplete' }}</td>
   </tr>
 </template>
 
