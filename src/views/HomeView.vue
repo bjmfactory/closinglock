@@ -1,5 +1,4 @@
 <script setup>
-import { ref, onMounted } from 'vue'
 import DocumentItem from '@/components/DocumentItem.vue'
 import DocumentService from '@/services/DocumentService'
 
@@ -8,16 +7,19 @@ import { storeToRefs } from 'pinia'
 
 const store = useDocumentStore()
 
-// storeToRefs lets todoList keep reactivity:
 const { documents } = storeToRefs(store)
-
-// destructuring action method doesn't require using storeToRefs:
-const { signDocument } = store
 </script>
 
 <template>
   <main>
-    <h1 class="text-gray-50">Home view</h1>
-    <DocumentItem v-for="document in documents" :key="document.id" :document="document" />
+    <h1 class="text-gray-50">Documents</h1>
+    <table>
+      <thead>
+        <td>Name</td>
+        <td>Status</td>
+        <td>Action</td>
+      </thead>
+      <DocumentItem v-for="document in documents" :key="document.id" :document="document" />
+    </table>
   </main>
 </template>

@@ -1,9 +1,18 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { useDocumentStore } from '@/stores/documents'
 
 defineProps({
   document: Object
 })
+
+const store = useDocumentStore()
+
+function sign(document) {
+  if (document.isComplete) {
+    return
+  }
+  store.signDocument(document.id)
+}
 </script>
 
 <template>
@@ -11,8 +20,9 @@ defineProps({
     <td>
       <a :href="document.viewLink">{{ document.name }}</a>
     </td>
-    <td>{{ document.isComplete === 'True' ? 'Complete' : 'Incomplete' }}</td>
-    <td>{{ document.isComplete === 'True' ? 'View Document' : 'Sign Document' }}</td>
+    <td>{{ document.isComplete ? 'Complete' : 'Incomplete' }}</td>
+    <td v-if="document.isComplete"><button>View Document</button></td>
+    <td v-else><button @click="sign(document)">Sign Document</button></td>
   </tr>
 </template>
 

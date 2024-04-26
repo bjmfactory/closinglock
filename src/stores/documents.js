@@ -5,19 +5,19 @@ export const useDocumentStore = defineStore('Documents', {
     documents: [
       {
         id: 123,
-        isComplete: 'False',
+        isComplete: false,
         name: 'Buyer Representation Agreement',
         viewLink: 'https:/www.example/buyer-representation-agreement'
       },
       {
         id: 456,
-        isComplete: 'True',
+        isComplete: true,
         name: 'Purchase Agreement',
         viewLink: 'https:/www.example/purchase-agreement'
       },
       {
         id: 789,
-        isComplete: 'True',
+        isComplete: false,
         name: "Seller's Property Disclosure",
         viewLink: 'https:/www.example/sellers-property-disclosure'
       }
@@ -27,7 +27,7 @@ export const useDocumentStore = defineStore('Documents', {
     signDocument(documentId) {
       const document = this.documents.find((document) => document.id === documentId)
       if (document) {
-        document.isCompleted = True
+        document.isComplete = true
       }
     }
   }
