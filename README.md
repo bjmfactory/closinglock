@@ -7,9 +7,6 @@ This project uses:
 - Pinia
 - Tailwind
 - ESLint
-
-I am also planning to add:
-
 - Vitest
 
 ## Recommended IDE Setup
