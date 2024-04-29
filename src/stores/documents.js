@@ -7,19 +7,19 @@ export const useDocumentStore = defineStore('Documents', {
         id: 123,
         isComplete: false,
         name: 'Buyer Representation Agreement',
-        viewLink: 'https://www.example/buyer-representation-agreement'
+        viewLink: 'https://www.example.com/buyer-representation-agreement'
       },
       {
         id: 456,
         isComplete: true,
         name: 'Purchase Agreement',
-        viewLink: 'https://www.example/purchase-agreement'
+        viewLink: 'https://www.example.com/purchase-agreement'
       },
       {
         id: 789,
         isComplete: false,
         name: "Seller's Property Disclosure",
-        viewLink: 'https://www.example/sellers-property-disclosure'
+        viewLink: 'https://www.example.com/sellers-property-disclosure'
       }
     ]
   }),
