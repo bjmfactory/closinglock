@@ -13,6 +13,10 @@ function sign(document) {
   }
   store.signDocument(document.id)
 }
+
+const goToURL = (url) => {
+  window.location.href = url
+}
 </script>
 
 <template>
@@ -23,7 +27,7 @@ function sign(document) {
     <td class="p-3 text-gray-600">{{ document.isComplete ? 'Complete' : 'Incomplete' }}</td>
     <td v-if="document.isComplete" class="p-3">
       <button
-        :href="document.viewLink"
+        @click="goToURL(document.viewLink)"
         class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
       >
         View Document
