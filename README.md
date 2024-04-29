@@ -5,9 +5,12 @@ This project uses:
 - Vue 3
 - Vite
 - Pinia
-- Vitest
 - Tailwind
 - ESLint
+
+I am also planning to add:
+
+- Vitest
 
 ## Recommended IDE Setup
 
