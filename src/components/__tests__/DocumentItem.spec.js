@@ -28,9 +28,7 @@ describe('DocumentItem component', () => {
     const signButton = wrapper.find('button.text-white')
     expect(wrapper.find('button').text()).toBe('Sign Document')
     expect(store.signDocument).toHaveBeenCalledTimes(0)
-    store.signDocument()
     signButton.trigger('click')
-    // Why is this 2 instead of 1?
-    expect(store.signDocument).toHaveBeenCalledTimes(2)
+    expect(store.signDocument).toHaveBeenCalledTimes(1)
   })
 })
