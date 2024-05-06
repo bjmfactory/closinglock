@@ -25,10 +25,10 @@ describe('DocumentItem component', () => {
     })
     const store = useDocumentStore()
 
-    const signButton = wrapper.find('button.text-white')
+    const button = wrapper.find('button')
     expect(wrapper.find('button').text()).toBe('Sign Document')
     expect(store.signDocument).toHaveBeenCalledTimes(0)
-    signButton.trigger('click')
+    button.trigger('click')
     expect(store.signDocument).toHaveBeenCalledTimes(1)
   })
 })
